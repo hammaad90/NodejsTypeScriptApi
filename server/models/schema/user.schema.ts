@@ -16,7 +16,7 @@ const schema = new Schema({
     password: {
         type: String
     },
-    isActive:{
+    isActive: {
         type: Boolean,
         default: true
     }

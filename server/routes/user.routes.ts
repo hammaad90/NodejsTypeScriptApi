@@ -1,13 +1,13 @@
 import { Application, Request, Response } from 'express';
-import {authValidator} from '../config/tokenValidator';
-import {UserController} from '../controllers/user.controller';
+import { authValidator } from '../config/tokenValidator';
+import { UserController } from '../controllers/user.controller';
 
 export class UserRoutes {
 
     private user_controller: UserController = new UserController();
 
     public route(app: Application) {
-        
+
         // to register user
         app.post('/api/user', (req: Request, res: Response) => {
             this.user_controller.create_user(req, res);
