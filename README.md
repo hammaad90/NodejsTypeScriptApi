@@ -1,6 +1,9 @@
+# TO start project: 
 1. Install typescript and ts-node globally npm install -g typescript ts-node  
 2. Install npm install on root directory
 3. Start mongo database server
+4. run `npm run start`  to start the project
+
 
 # Apis with payload:
 # Register User APi:
