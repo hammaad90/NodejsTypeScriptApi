@@ -8,7 +8,7 @@ class App {
    public app: express.Application;
    private userRoutes: UserRoutes = new UserRoutes();
 
-   
+
    constructor() {
       this.app = express();
       this.config();
@@ -23,7 +23,7 @@ class App {
 
    // connect to DB
    private connectDb(): void {
-    dBConnect();
+      dBConnect();
    }
 
 }
