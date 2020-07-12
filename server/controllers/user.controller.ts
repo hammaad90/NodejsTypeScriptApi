@@ -40,7 +40,6 @@ export class UserController {
       }
 
     } catch (error) {
-      console.log('catch', error);
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
         .send(error.message);
@@ -86,7 +85,6 @@ export class UserController {
         }
       }
     } catch (error) {
-      console.log('catch login');
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
         .send(error.message);
@@ -100,9 +98,7 @@ export class UserController {
       return res
         .status(httpStatus.OK)
         .send({ info: 'Product List', data: product })
-      // return success response
     } catch (error) {
-      console.log('catch product');
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
         .send(error.message);
@@ -132,9 +128,7 @@ export class UserController {
       return res
         .status(httpStatus.OK)
         .send({ info: 'Cart List', data: checkItemInCart })
-      // return success response
     } catch (error) {
-      console.log('catch cart', error);
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
         .send(error.message);
@@ -148,9 +142,7 @@ export class UserController {
       return res
         .status(httpStatus.OK)
         .send({ info: 'Cart Product', data: cartProduct })
-      // return success response
     } catch (error) {
-      console.log('catch product')
       return res
         .status(httpStatus.INTERNAL_SERVER_ERROR)
         .send(error.message);
