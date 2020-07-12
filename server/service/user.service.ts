@@ -32,7 +32,7 @@ export default class UserService {
     }
 
     // method to let user login
-    public async login(payload: IUser, user: IUser) {
+    public async login(payload: IUser, user) {
         let passwordIsValid = bcrypt.compareSync(payload.password, user.password);
         if (!passwordIsValid) {
             return false;
@@ -71,7 +71,7 @@ export default class UserService {
         }
         let cart = await getCart(query);
         if (cart) {
-            let products = cart.products;
+            let products = cart['products'];
             // update cart
             let cartProduct = products.find((item) => item._product == payload.productId)
             !cartProduct ? products.push(this.updateCartItem(payload)) : _.set(cartProduct, "quantity", cartProduct.quantity + payload.quantity);
